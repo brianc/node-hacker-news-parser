@@ -2,6 +2,7 @@ var fs = require('fs');
 var assert = require('assert');
 
 var moment = require('moment');
+var request = require('request');
 
 var hn = require(__dirname + '/../lib/');
 
@@ -89,5 +90,21 @@ describe('hacker-news', function() {
         assert.equal(this.result.more.href, 'https://news.ycombinator.com/x?fnid=L4Utx2mqoS');
       })
     })
+  })
+
+  describe('current html', function() {
+    return;
+    before(function(done) {
+      var self = this;
+      request("https://news.ycombinator.com/item?id=4992617", function(err, res) {
+        self.res = res;
+        done(err);
+      })
+    })
+
+    it('parses', function() {
+      assert(hn.parse(this.res.body).comments.length > 0, "received no comments")
+    })
+    
   })
 })

@@ -18,7 +18,11 @@
   "author": "Brian M. Carlson",
   "license": "MIT",
   "dependencies": {
-    "mocha": "~1.7.4",
-    "jquery": "~1.8.3"
+    "mocha": "*",
+    "moment": "~1.7.2",
+    "jquery": "~1.8.3",
+  },
+  "devDependencies": {
+    "request": "*"
   }
 }
