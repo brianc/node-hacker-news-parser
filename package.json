@@ -1,6 +1,6 @@
 {
   "name": "hacker-news-parser",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "parser for hacker news comments",
   "main": "lib/",
   "scripts": {
@@ -18,11 +18,11 @@
   "author": "Brian M. Carlson",
   "license": "MIT",
   "dependencies": {
-    "mocha": "*",
     "moment": "~1.7.2",
     "cheerio": "*"
   },
   "devDependencies": {
+    "mocha": "*",
     "request": "*"
   }
 }

@@ -93,9 +93,9 @@ describe('hacker-news', function() {
   })
 
   describe('current html', function() {
-    return;
     before(function(done) {
       var self = this;
+      //who's hiring december '
       request("https://news.ycombinator.com/item?id=4992617", function(err, res) {
         self.res = res;
         done(err);
@@ -103,6 +103,7 @@ describe('hacker-news', function() {
     })
 
     it('parses', function() {
+      this.timeout(500000);
       assert(hn.parse(this.res.body).comments.length > 0, "received no comments")
     })
     
