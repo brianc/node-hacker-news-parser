@@ -2,6 +2,9 @@
 
 Parses the insanely shitty html of hacker news comments into json
 
+
+[![Build Status](https://secure.travis-ci.org/brianc/node-hacker-news-parser.png)](http://travis-ci.org/brianc/node-hacker-news-parser)
+
 ## example
 
 ```js
