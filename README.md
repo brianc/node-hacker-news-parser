@@ -26,27 +26,28 @@ parses the html of a hacker news post
 _returns:_
 ```js
 var result = {
-  comments: [comment], /*array of comment objects*/
-  more: moreLink /*moreLink object - null if there is no next page*/
+  comments: [comment], /*array of Comment objects*/
+  more: moreLink /*MoreLink object - null if there is no next page*/
 }
 ```
 _note: moreLink will be null if there is no 'more' link at the bottom_
 
 
-### comment
+### Comment
 
-represents a single comment
+represents a single comment, accessible via the result returned from `hn.parse`
 ```js
 var comment = {
   body: /*raw html body of the comment*/
   date: /*date object (UTC) of when the comment was posted*/
   href: /*the uri to the comment*/
+  comments: [] /*array of child Comments*/
 }
 ```
 
-### moreLink
+### MoreLink
 
-represents a link to the next page (if there is a next page)
+represents a link to the next page (if there is a next page), accessible via the result returned from `hn.parse`
 ```js
 var moreLink = {
   href: /*the uri to the next page of comments*/
