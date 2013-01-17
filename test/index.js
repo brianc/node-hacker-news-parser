@@ -55,6 +55,10 @@ describe('hacker-news', function() {
       it('has href', function() {
         assert.equal(this.comment.href, 'https://news.ycombinator.com/item?id=5003092');
       })
+
+      it('has id', function() {
+        assert.equal(this.comment.id, '5003092');
+      })
     })
 
     describe('date parsing', function() {
@@ -94,6 +98,7 @@ describe('hacker-news', function() {
 
   describe('current html', function() {
     before(function(done) {
+      this.timeout(500000);
       var self = this;
       //who's hiring december '
       request("https://news.ycombinator.com/item?id=4992617", function(err, res) {
