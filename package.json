@@ -1,6 +1,6 @@
 {
   "name": "hacker-news-parser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "parser for hacker news comments",
   "main": "lib/",
   "scripts": {
